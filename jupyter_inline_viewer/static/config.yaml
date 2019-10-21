@@ -1,0 +1,21 @@
+Type: IPython Notebook Extension
+Name: Jupyter inline viewer
+Description: TBD
+Link: readme.md
+Icon: icon.png
+Main: main.js
+Compatibility: 5.x
+
+Parameters:
+- name: jupyter_inline_viewer.bind_left_right
+  input_type: checkbox
+  description: Bind left and right arrow keys for next/previous
+  default: true
+- name: jupyter_inline_viewer.bind_hl
+  input_type: checkbox
+  description: Bind h and l keys for next/previous
+  default: true
+- name: jupyter_inline_viewer.bind_append_to_a
+  input_type: checkbox
+  description: Bind a keys to append current url to the next cell
+  default: true
