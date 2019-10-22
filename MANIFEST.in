@@ -1,1 +1,2 @@
 include jupyter_inline_viewer/static/*
+include jupyter_inline_viewer/static/libs/*
