@@ -40,3 +40,12 @@ def show_jiv(urls, **params):
     # TODO: Remove this hack.
     display(HTML(
         viewer.format(uuid, github_url, json.dumps(urls), json.dumps(params))))
+
+
+def _jupyter_nbextension_paths():
+    return [
+        dict(section='notebook',
+             src='static',
+             dest='jupyter_inline_viewer/static',
+             require='jupyter_inline_viewer/static/main')
+    ]
