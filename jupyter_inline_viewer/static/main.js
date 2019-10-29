@@ -22,6 +22,7 @@ define([
   };
 
   var JIV_DEFAULT_PARAMS = {
+    cache: false,
     size: [640, 480],
     camera_position: [0, 0, -1],
     camera_up: [0, -1, 0],
