@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='jupyter-inline-viewer',
-    version='0.2.0',
+    version='0.3.0',
     packages=find_packages(),
     include_package_data=True,
     setup_requires=['pytest-runner'],
@@ -23,5 +23,7 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
     ],
 )

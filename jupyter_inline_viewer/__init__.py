@@ -5,7 +5,7 @@ __author__ = 'Oleg Selivanov <oleg.a.selivanov@gmail.com>'
 import base64
 import json
 import time
-from cStringIO import StringIO
+from io import StringIO
 from uuid import uuid4
 
 from IPython.display import HTML, display
@@ -136,7 +136,7 @@ def show_jiv(urls, **params):
                 'Take a screenshot and attach it to cell as image instead.')
 
         if slides == 'all':
-            url_indices = range(len(urls))
+            url_indices = list(range(len(urls)))
 
         elif hasattr(slides, '__iter__'):
             url_indices = [idx - 1 for idx in slides]
@@ -147,7 +147,7 @@ def show_jiv(urls, **params):
                 calc_uniform_subsample_indices(urls, n)
 
         else:
-            print 'Unsupported "slides" parameter value'
+            print('Unsupported "slides" parameter value')
             return
 
         img_html_list = []
@@ -208,7 +208,7 @@ def calc_uniform_subsample_indices(input_list, sublist_length):
         indices = [
             float(i) * (float(len(l) - 1) / float(n - 1)) for i in range(n)]
 
-    indices = map(int, indices)
+    indices = list(map(int, indices))
     indices = sorted(set(indices))
 
     return indices
